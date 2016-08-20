@@ -1,7 +1,7 @@
 package calc;
 
 class Evaluate {
-    int i = 0;
+    int i;
     String source;
     
     public Evaluate(String s) {
@@ -10,6 +10,7 @@ class Evaluate {
     
     public String eval() {
         try {
+            i = 0;
             Double x = expression();
             if (i != source.length()) {
                 return null;
@@ -21,11 +22,11 @@ class Evaluate {
         }
     }
     
-    public char getChar() {
+    private char getChar() {
         return i < source.length() ? source.charAt(i) : 0;
     }
     
-    public double number(){ 
+    private double number(){ 
         double result = 0;
         while(Character.isDigit(getChar())) {
             result *= 10  ; 
@@ -45,7 +46,7 @@ class Evaluate {
     }
     
     
-    public double expression() {
+    private double expression() {
         double left = term();
         while (true) {
             char binop =  getChar();
@@ -66,7 +67,7 @@ class Evaluate {
     }
     
     
-    public double factor() {
+    private double factor() {
         if (getChar() == '(') {
             ++i;
             double res = expression();
@@ -82,7 +83,7 @@ class Evaluate {
         else { throw new UnknownError();}
     }
     
-    public double term() {
+    private double term() {
         double Left = factor();
         while (true) {
             char binop =  getChar();
@@ -97,7 +98,6 @@ class Evaluate {
             else {
                 Left /= Right;
             }
-            
         }    
         return Left;
     }
@@ -115,7 +115,7 @@ public class Calc {
         System.out.println(evaluate("5 / 3")); // 1.6667
         System.out.println(evaluate("grege")); // null
     }
-    public static String evaluate(String str) {
+    static String evaluate(String str) {
         Evaluate s = new Evaluate(str);
         return(s.eval());
     }
