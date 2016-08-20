@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Subsequence {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<Integer> pattern = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+        List<Integer> pattern = new ArrayList<>();
         for(int i = 0; i < 5; ++i) {
             list.add(i + 1);
         }
@@ -14,8 +14,8 @@ public class Subsequence {
         pattern.add(5);
         System.out.println(search(list,pattern)); // expect true
         
-        ArrayList<String> listS = new ArrayList<>();
-        ArrayList<String> patternS = new ArrayList<>();
+        List<String> listS = new ArrayList<>();
+        List<String> patternS = new ArrayList<>();
         
         listS.add("abc");
         listS.add("xyz");
