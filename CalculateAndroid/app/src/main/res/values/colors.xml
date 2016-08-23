@@ -3,14 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorBackground">#D7D6D6</color>
-    <color name="colorDigit">#CFCFCF</color>
-    <color name="colorScoreBoard">#000000</color>
-    <color name="colorNumber">#958F37</color>
-    <color name="colorPlus">#77DD77</color>
-    <color name="сolorMinus">#E9967A</color>
-    <color name="colorMult">#DA70D6</color>
-    <color name="colorDiv">#6495ED</color>
-    <color name="colorEqually">#FFFFFF</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorDigit">#A5CCF3</color>
+    <color name="colorOperation">#FFFFFF</color>
+    <color name="colorEqually">#EA8DF7</color>
+
 
 </resources>

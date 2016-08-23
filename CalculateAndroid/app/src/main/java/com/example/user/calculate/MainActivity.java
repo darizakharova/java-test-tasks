@@ -1,8 +1,10 @@
 package com.example.user.calculate;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mNumberButtons.add((Button)findViewById(R.id.button7));
         mNumberButtons.add((Button)findViewById(R.id.button8));
         mNumberButtons.add((Button)findViewById(R.id.button9));
+
     }
 
 
@@ -87,9 +90,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickDigit(View view) {
         if (mVar.length() < 10) {
+            if (mVar.equals("0")) {
+                mVar = "";
+            }
             mVar += Integer.toString(mNumberButtons.indexOf(view));
             mInfoText.setText(mVar);
+
         }
+    }
+
+    public void onClickSelect(View view) {
     }
 }
 
